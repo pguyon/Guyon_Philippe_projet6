@@ -10,15 +10,11 @@ async function getPhotographers() {
     .then((data) => {
       photographers = data.photographers;
     });
-  getCurrentPhotographer(photographers);
+
   return photographers;
 }
 
-function getCurrentPhotographer(photographer) {
-  return console.log(photographer);
-}
-
-async function init() {
+async function currentPhotographer() {
   // Récupération des données des photographes
   photographers = await getPhotographers();
   // Récupération de l'id
@@ -33,4 +29,4 @@ async function init() {
   console.log(photographer);
 }
 
-init();
+currentPhotographer();
