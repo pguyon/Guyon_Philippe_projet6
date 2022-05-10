@@ -43,5 +43,5 @@ function photographerFactory(data) {
     photographerSection.innerHTML = article;
     return photographerSection;
   }
-  return getUserCardDOM();
+  return { photographerSection, getUserCardDOM };
 }
