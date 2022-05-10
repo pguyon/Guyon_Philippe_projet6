@@ -1,19 +1,17 @@
 async function getPhotographers() {
-  let res = await fetch("./data/photographers.json", {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error("Une erreur c'est produite");
-  }
-
-  let data = await res.json();
-  const photographers = data.photographers;
-  displayData(photographers);
-  console.log(photographers);
+  await fetch("./data/photographers.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Une erreur c'est produite");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      photographers = data.photographers;
+      displayData(photographers);
+      console.log(photographers);
+    });
+  return photographers;
 }
 
 async function displayData(photographers) {
