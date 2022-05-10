@@ -18,13 +18,13 @@ async function currentPhotographer() {
   // Récupération des données des photographes
   photographers = await getPhotographers();
   // Récupération de l'id
-  let idRequested = window.location.href.split("?")[1];
-  if (!idRequested) {
-    idRequested = 243;
+  let id = window.location.href.split("?")[1];
+  if (!id) {
+    id = 243;
   }
   // Récupération des données du photographe voulu
   [photographer] = await photographers.filter(
-    (photographer) => photographer.id == idRequested
+    (photographer) => photographer.id == id
   );
   console.log(photographer);
 }

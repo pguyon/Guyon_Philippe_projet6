@@ -1,7 +1,7 @@
 function photographerFactory(data) {
   const { name, portrait, city, country, tagline, price, id } = data;
   const picture = `./assets/photographers/${portrait}`;
-  const photographerId = id;
+  
 
   function getUserCardDOM() {
     // Création des éléments de photographer_section
@@ -14,7 +14,7 @@ function photographerFactory(data) {
     const span = document.createElement("span");
 
     // Création des l'url avec l'id du photographe en paramètres
-    link.href = `photographer.html?${photographerId}`;
+    link.href = `photographer.html?${id}`;
 
     // Ajouts des attributs sur l'image
     img.setAttribute("src", picture);
