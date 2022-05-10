@@ -9,7 +9,6 @@ async function getPhotographers() {
     .then((data) => {
       photographers = data.photographers;
       displayData(photographers);
-      console.log(photographers);
     });
   return photographers;
 }
