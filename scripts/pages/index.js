@@ -1,21 +1,22 @@
 async function getPhotographers() {
-  // Penser à remplacer par les données récupérées dans le json
   await fetch("/data/photographers.json", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-  }).then((res) => {
-    if (res.ok) {
-      const data = res.json();
-      console.log(data);
-    }
-  });
+  })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Something bad happened.");
+      }
 
-  // et bien retourner le tableau photographers seulement une fois
-  return {
-    photographers: [...photographers],
-  };
+      return res.json();
+    })
+    .then((data) => {
+      const photographers = data.photographers;
+      console.log(photographers);
+      return photographers;
+    });
 }
 
 async function displayData(photographers) {
