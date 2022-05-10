@@ -13,7 +13,7 @@ function photographerFactory(data) {
     const span = document.createElement("span");
 
     // Création des l'url avec l'id du photographe en paramètres
-    link.href = `.photographe.html?${id}`;
+    link.href = `photographer.html?${id}`;
 
     // Ajouts des attributs sur l'image
     img.setAttribute("src", picture);
