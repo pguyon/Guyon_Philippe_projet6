@@ -3,9 +3,21 @@
 }
 
 .photograph-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
   background-color: #fafafa;
   height: 300px;
   margin: 0 100px;
+}
+
+.photograph-header img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  order: 3;
+  object-fit: cover;
 }
 
 .contact_button {
@@ -19,6 +31,7 @@
   background-color: #901c1c;
   border-radius: 5px;
   cursor: pointer;
+  order: 2;
 }
 
 .contact_button:hover,
