@@ -24,26 +24,36 @@ async function getAllMedia() {
     })
     .then((value) => {
       medias = value.media;
-      console.log(medias);
     });
 
   return medias;
 }
 
+/* async function photographMedia() {
+  const medias = await getAllMedia();
+  return medias;
+} */
+
 async function currentPhotographer() {
   // Récupération des données des photographes
   photographers = await getAllPhotographers();
   // Récupération de l'id
-  let idRequested = window.location.href.split("?")[1];
-  if (!idRequested) {
-    idRequested = 243;
-  }
+  let currentPhotographId = window.location.href.split("?")[1];
+
   // Récupération des données du photographe voulu
   [photographer] = await photographers.filter(
-    (photographer) => photographer.id == idRequested
+    (photographer) => photographer.id == currentPhotographId
+  );
+
+  pictures = await getAllMedia();
+  // Get PHOTOS for right photographer
+  pictures = pictures.filter(
+    (picture) => picture.photographerId == currentPhotographId
   );
   displayCurrentData(photographer);
-  return photographer;
+  console.log(pictures);
+
+  return photographer, pictures;
 }
 
 async function displayCurrentData(photographer) {
