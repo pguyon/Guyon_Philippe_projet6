@@ -1,5 +1,5 @@
 function currentPhotographFactory(data) {
-  const { name, portrait, city, country, tagline, price, id } = data;
+  const { name, portrait, city, country, tagline, id } = data;
   const picture = `./assets/photographers/${portrait}`;
 
   function getCurrentUserCardDOM() {
@@ -11,7 +11,6 @@ function currentPhotographFactory(data) {
     const h2 = document.createElement("h2");
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
-    const span = document.createElement("span");
 
     // Ajouts des attributs sur l'image
     img.setAttribute("src", picture);
@@ -19,9 +18,8 @@ function currentPhotographFactory(data) {
 
     // Ajouts des valeurs sur les éléments
     h2.textContent = name;
-    h3.textContent = `${city} , ${country}`;
+    h3.textContent = `${city}, ${country}`;
     p.textContent = tagline;
-    span.textContent = `${price}€/jour`;
 
     // Ajouts des éléments à la div photographer_section
 
@@ -30,7 +28,7 @@ function currentPhotographFactory(data) {
     infosPhotographDiv.appendChild(h2);
     infosPhotographDiv.appendChild(h3);
     infosPhotographDiv.appendChild(p);
-    infosPhotographDiv.appendChild(span);
+
     return photographHeader, infosPhotographDiv;
   }
 
@@ -40,7 +38,6 @@ function currentPhotographFactory(data) {
     city,
     country,
     tagline,
-    price,
     id,
     getCurrentUserCardDOM,
   };

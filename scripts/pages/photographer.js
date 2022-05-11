@@ -14,6 +14,22 @@ async function getAllPhotographers() {
   return photographers;
 }
 
+async function getAllMedia() {
+  await fetch("./data/photographers.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Une erreur c'est produite");
+      }
+      return res.json();
+    })
+    .then((value) => {
+      medias = value.media;
+      console.log(medias);
+    });
+
+  return medias;
+}
+
 async function currentPhotographer() {
   // Récupération des données des photographes
   photographers = await getAllPhotographers();
@@ -35,8 +51,7 @@ async function displayCurrentData(photographer) {
   const photographerModel = currentPhotographFactory(photographer);
   const photographCardDOM = photographerModel.getCurrentUserCardDOM();
   photographHeader.appendChild(photographCardDOM);
-  console.log(photographer);
-  console.log(photographCardDOM);
 }
 
 currentPhotographer();
+getAllMedia();
