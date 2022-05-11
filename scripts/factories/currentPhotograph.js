@@ -4,8 +4,9 @@ function currentPhotographFactory(data) {
 
   function getCurrentUserCardDOM() {
     // Création des éléments de photographer_section
+    const photographHeader = document.querySelector(".photograph-header");
+    const infosPhotographDiv = document.createElement("div");
 
-    const article = document.createElement("article");
     const img = document.createElement("img");
     const h2 = document.createElement("h2");
     const h3 = document.createElement("h3");
@@ -24,12 +25,13 @@ function currentPhotographFactory(data) {
 
     // Ajouts des éléments à la div photographer_section
 
-    article.appendChild(img);
-    article.appendChild(h2);
-    article.appendChild(h3);
-    article.appendChild(p);
-    article.appendChild(span);
-    return article;
+    photographHeader.prepend(infosPhotographDiv);
+    photographHeader.appendChild(img);
+    infosPhotographDiv.appendChild(h2);
+    infosPhotographDiv.appendChild(h3);
+    infosPhotographDiv.appendChild(p);
+    infosPhotographDiv.appendChild(span);
+    return photographHeader, infosPhotographDiv;
   }
 
   return {
