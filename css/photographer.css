@@ -16,6 +16,8 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  order: 3;
+  object-fit: cover;
 }
 
 .contact_button {
@@ -29,6 +31,7 @@
   background-color: #901c1c;
   border-radius: 5px;
   cursor: pointer;
+  order: 2;
 }
 
 .contact_button:hover,
