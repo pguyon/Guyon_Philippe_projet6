@@ -1,5 +1,5 @@
 function mediaFactories(value) {
-  const { photographerId, title, image, likes, date, price } = value;
+  const { photographerId, title, image, video, likes, date, price } = value;
 
-  return { photographerId, title, image, likes, date, price };
+  return { photographerId, title, image, video, likes, date, price };
 }
