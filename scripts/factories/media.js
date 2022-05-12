@@ -17,6 +17,8 @@ function mediaFactories(value) {
 
     main.appendChild(mediaDiv);
     mediaDiv.appendChild(h2);
+
+    return main, mediaDiv;
   }
 
   return {

@@ -61,18 +61,17 @@ async function displayCurrentData(photographer) {
   const photographHeader = document.querySelector(".photograph-header");
   const photographerModel = currentPhotographFactory(photographer);
   const photographCardDOM = photographerModel.getCurrentUserCardDOM();
-  photographHeader.appendChild(photographCardDOM);  
+  photographHeader.appendChild(photographCardDOM); 
 }
 
-async function displayMediaData(pictures){
+ async function displayMediaData(pictures){
   const mediaSection = document.querySelector(".mediaDiv");
   pictures.map((picture) => {
     const mediaModel =  mediaFactories(picture);
     const mediaCardDOM = mediaModel.getMediaCardDom();
     mediaSection.appendChild(mediaCardDOM);
   })
+} 
 
-}
-
-currentPhotographer();
 getAllMedia();
+currentPhotographer();
