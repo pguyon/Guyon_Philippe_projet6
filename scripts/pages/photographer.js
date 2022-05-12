@@ -24,11 +24,15 @@ async function getAllMedia() {
     })
     .then((value) => {
       medias = value.media;
-      console.log(medias);
     });
 
   return medias;
 }
+
+/* async function photographMedia() {
+  const medias = await getAllMedia();
+  return medias;
+} */
 
 async function currentPhotographer() {
   // Récupération des données des photographes
@@ -43,14 +47,17 @@ async function currentPhotographer() {
     (photographer) => photographer.id == id
   );
   displayCurrentData(photographer);
-  return photographer;
+  console.log(pictures);
+
+  return photographer, pictures;
 }
 
-async function displayCurrentData(photographer) {
+async function displayCurrentData(photographer, pictures) {
   const photographHeader = document.querySelector(".photograph-header");
   const photographerModel = currentPhotographFactory(photographer);
   const photographCardDOM = photographerModel.getCurrentUserCardDOM();
   photographHeader.appendChild(photographCardDOM);
+  const mediaDiv = document.querySelector("mediaDiv");
 }
 
 currentPhotographer();
