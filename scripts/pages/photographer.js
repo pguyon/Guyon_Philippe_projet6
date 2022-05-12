@@ -56,11 +56,12 @@ async function currentPhotographer() {
   return photographer, pictures;
 }
 
-async function displayCurrentData(photographer) {
+async function displayCurrentData(photographer, pictures) {
   const photographHeader = document.querySelector(".photograph-header");
   const photographerModel = currentPhotographFactory(photographer);
   const photographCardDOM = photographerModel.getCurrentUserCardDOM();
   photographHeader.appendChild(photographCardDOM);
+  const mediaDiv = document.querySelector("mediaDiv");
 }
 
 currentPhotographer();
