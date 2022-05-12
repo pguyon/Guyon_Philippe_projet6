@@ -5,18 +5,17 @@ function mediaFactories(value) {
   const videos = `./assets/photos/${photographerId}/${video}`;
 
   function getMediaCardDom() {
-    const mediaDiv = document.querySelector(".mediaDiv");
-    mediaDiv.classList.add("mediaDiv");
+    const article = document.createElement("article");
     const imgMedia = document.createElement("img");
     const h2 = document.createElement("h2");
 
-    imgMedia.setAttribute("src", images);
+    //imgMedia.setAttribute("src", images);
 
     h2.textContent = title;
 
-    mediaDiv.appendChild(h2);
+    article.appendChild(h2);
 
-    return mediaDiv;
+    return article;
   }
 
   return {
