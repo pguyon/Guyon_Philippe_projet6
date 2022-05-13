@@ -20,7 +20,6 @@ function mediaFactories(value) {
   }
 
   return {
-    name,
     photographerId,
     title,
     image,
