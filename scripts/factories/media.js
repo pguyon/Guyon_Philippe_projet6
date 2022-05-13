@@ -9,16 +9,18 @@ function mediaFactories(value) {
     const imgMedia = document.createElement("img");
     const h2 = document.createElement("h2");
 
-    //imgMedia.setAttribute("src", images);
+    imgMedia.setAttribute("src", images);
+    imgMedia.alt = `Picture of ${title}`;
 
     h2.textContent = title;
-
+    article.appendChild(imgMedia);
     article.appendChild(h2);
 
     return article;
   }
 
   return {
+    name,
     photographerId,
     title,
     image,
