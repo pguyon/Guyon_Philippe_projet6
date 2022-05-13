@@ -1,9 +1,8 @@
-*{
+ *{
   max-width: 1900px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-
 }
 
 #contact_modal {
@@ -127,7 +126,12 @@ form input {
   font-size: 18px;
 }
 
-.mediaDiv article img {
+.mediaDiv article img{
+  width: 570px;
+  height: 500px;
+  object-fit: cover;
+}
+.mediaDiv article video{
   width: 570px;
   height: 500px;
   object-fit: cover;
