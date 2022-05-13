@@ -12,17 +12,22 @@ function mediaFactories(value) {
     const article = document.createElement("article");
     const imgMedia = document.createElement("img");
     const videoMedia = document.createElement('video')
+    const source = document.createElement('source')
     const h2 = document.createElement("h2");
 
     imgMedia.setAttribute("src", media);
     imgMedia.alt = `Picture of ${title}`;
-    videoMedia.setAttribute("src", media);
+    source.setAttribute("src", media);
+    videoMedia.controls = true;
+    videoMedia.autoplay = false;
+    videoMedia.muted = false
 
     h2.textContent = title;
 
     if(mediaType == 'image'){
       article.appendChild(imgMedia);
     }else{
+      videoMedia.appendChild(source)
       article.appendChild(videoMedia);
 
     }
