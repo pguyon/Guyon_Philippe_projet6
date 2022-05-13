@@ -15,6 +15,7 @@ function photographerFactory(data) {
 
     // Création des l'url avec l'id du photographe en paramètres
     link.href = `photographer.html?${id}`;
+    link.classList.add('photograph__link');
 
     // Ajout de l'aria-label sur les link
     link.ariaLabel = `Learn more about ${name}`;
