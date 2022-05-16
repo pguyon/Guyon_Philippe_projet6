@@ -68,6 +68,10 @@ body {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+  width: 200px;
+  position: sticky;
+  left: 90%;
+  bottom: 50%;
 }
 
 .modal {

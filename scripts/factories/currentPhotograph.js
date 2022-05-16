@@ -5,6 +5,7 @@ function currentPhotographFactory(data) {
   function getCurrentUserCardDOM() {
     // Création des éléments de photographer_section
     const photographHeader = document.querySelector(".photograph-header");
+    const main = document.querySelector("#main");
     const infosPhotographDiv = document.createElement("div");
 
     const img = document.createElement("img");
@@ -35,7 +36,7 @@ function currentPhotographFactory(data) {
     infosPhotographDiv.appendChild(h3);
     infosPhotographDiv.appendChild(p);
     photographHeader.appendChild(img);
-    infosPhotographDiv.appendChild(priceDiv);
+    main.appendChild(priceDiv);
     priceDiv.appendChild(globalLikes);
     priceDiv.appendChild(tarif);
 
