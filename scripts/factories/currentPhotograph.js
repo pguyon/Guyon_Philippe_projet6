@@ -1,5 +1,5 @@
 function currentPhotographFactory(data) {
-  const { name, portrait, city, country, tagline, id } = data;
+  const { name, portrait, city, country, tagline, id, price } = data;
   const picture = `./assets/photographers/${portrait}`;
 
   function getCurrentUserCardDOM() {
@@ -11,23 +11,33 @@ function currentPhotographFactory(data) {
     const h2 = document.createElement("h2");
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
+    const priceDiv = document.createElement("div");
+    const globalLikes = document.createElement("span");
+    const tarif = document.createElement("span");
 
     // Ajouts des attributs sur l'image
     img.setAttribute("src", picture);
     img.alt = `Picture of ${name}`;
 
+    priceDiv.classList.add("price");
+
     // Ajouts des valeurs sur les éléments
     h2.textContent = name;
     h3.textContent = `${city}, ${country}`;
     p.textContent = tagline;
+    tarif.textContent = `${price}€ / jour`;
+    globalLikes.textContent = "296 125";
 
     // Ajouts des éléments à la div photographer_section
 
-    photographHeader.prepend(infosPhotographDiv);
-    photographHeader.appendChild(img);
+    //photographHeader.prepend(infosPhotographDiv);
     infosPhotographDiv.appendChild(h2);
     infosPhotographDiv.appendChild(h3);
     infosPhotographDiv.appendChild(p);
+    photographHeader.appendChild(img);
+    infosPhotographDiv.appendChild(priceDiv);
+    priceDiv.appendChild(globalLikes);
+    priceDiv.appendChild(tarif);
 
     return photographHeader, infosPhotographDiv;
   }
@@ -39,6 +49,7 @@ function currentPhotographFactory(data) {
     country,
     tagline,
     id,
+    price,
     getCurrentUserCardDOM,
   };
 }

@@ -61,6 +61,15 @@ body {
   color: black;
 }
 
+.price {
+  background-color: #db8876;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
 .modal {
   border-radius: 5px;
   background-color: #db8876;
