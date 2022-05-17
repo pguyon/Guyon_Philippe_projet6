@@ -51,11 +51,6 @@ async function currentPhotographer() {
 
   displayCurrentData(photographer);
   displayMediaData(pictures);
-  /*  console.log(pictures);
-  console.log(pictures[4].likes);
-  console.log(photographer.price); */
-  /*  totalLikesAndTarif.innerText = `${photographer.price}€ / jour`;
-  main.appendChild(totalLikesAndTarif); */
 
   return photographer, pictures;
 }
