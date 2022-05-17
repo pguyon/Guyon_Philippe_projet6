@@ -1,5 +1,5 @@
 function mediaFactories(value) {
-  const { photographerId, title, image, video, likes, date, price } = value;
+  const { photographerId, title, image, video, likes, date } = value;
 
   let mediaType, media;
   let count = likes;
@@ -59,7 +59,6 @@ function mediaFactories(value) {
     video,
     likes,
     date,
-    price,
     count,
     getMediaCardDom,
   };

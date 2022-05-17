@@ -1,7 +1,6 @@
 function photographerFactory(data) {
   const { name, portrait, city, country, tagline, price, id } = data;
   const picture = `./assets/photographers/${portrait}`;
-  
 
   function getUserCardDOM() {
     // Création des éléments de photographer_section
@@ -15,14 +14,14 @@ function photographerFactory(data) {
 
     // Création des l'url avec l'id du photographe en paramètres
     link.href = `photographer.html?${id}`;
-    link.classList.add('photograph__link');
+    link.classList.add("photograph__link");
 
     // Ajout de l'aria-label sur les link
-    link.ariaLabel = `Learn more about ${name}`;
+    link.ariaLabel = `En apprendre plus sur ${name}`;
 
     // Ajouts des attributs sur l'image
     img.setAttribute("src", picture);
-    img.alt = `Picture of ${name}`;
+    img.alt = `Photo de ${name}`;
 
     // Ajouts des valeurs sur les éléments
     h2.textContent = name;

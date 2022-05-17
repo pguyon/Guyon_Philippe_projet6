@@ -13,21 +13,21 @@ function currentPhotographFactory(data) {
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
     const priceDiv = document.createElement("div");
-    const globalLikes = document.createElement("span");
-    const tarif = document.createElement("span");
+    //const globalLikes = document.createElement("span");
+    //const tarif = document.createElement("span");
 
     // Ajouts des attributs sur l'image
     img.setAttribute("src", picture);
-    img.alt = `Picture of ${name}`;
+    img.alt = `Photo de ${name}`;
 
-    priceDiv.classList.add("price");
+    //priceDiv.classList.add("price");
 
     // Ajouts des valeurs sur les éléments
     h2.textContent = name;
     h3.textContent = `${city}, ${country}`;
     p.textContent = tagline;
-    tarif.textContent = `${price}€ / jour`;
-    globalLikes.textContent = "296 125";
+    //tarif.textContent = `${price}€ / jour`;
+    //globalLikes.textContent = "296 125";
 
     // Ajouts des éléments à la div photographer_section
 
@@ -37,8 +37,8 @@ function currentPhotographFactory(data) {
     infosPhotographDiv.appendChild(p);
     photographHeader.appendChild(img);
     main.appendChild(priceDiv);
-    priceDiv.appendChild(globalLikes);
-    priceDiv.appendChild(tarif);
+    //priceDiv.appendChild(globalLikes);
+    //priceDiv.appendChild(tarif);
 
     return photographHeader, infosPhotographDiv;
   }

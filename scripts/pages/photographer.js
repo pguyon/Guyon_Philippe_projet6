@@ -1,4 +1,7 @@
 //Mettre le code JavaScript lié à la page photographer.html
+let totalLikesAndTarif = document.createElement("div");
+const main = document.querySelector("#main");
+
 async function getAllPhotographers() {
   await fetch("./data/photographers.json")
     .then((res) => {
@@ -41,7 +44,7 @@ async function currentPhotographer() {
   );
 
   pictures = await getAllMedia();
-  // Get PHOTOS for right photographer
+  // Récupartion des medias du photographes
   pictures = await pictures.filter(
     (picture) => picture.photographerId == currentPhotographId
   );
@@ -49,7 +52,10 @@ async function currentPhotographer() {
   displayCurrentData(photographer);
   displayMediaData(pictures);
   console.log(pictures);
-  console.log(photographer);
+  console.log(pictures[4].likes);
+  console.log(photographer.price);
+  totalLikesAndTarif.innerText = `${photographer.price}€ / jour`;
+  main.appendChild(totalLikesAndTarif);
 
   return photographer, pictures;
 }
