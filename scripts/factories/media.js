@@ -29,6 +29,7 @@ function mediaFactories(value) {
     videoMedia.muted = false;
     descriptionDiv.classList.add("img__description");
     imgLikes.classList.add("img__likes");
+    imgLikes.ariaLabel = "Total de likes";
 
     // Add content
     h2.textContent = title;
@@ -46,10 +47,10 @@ function mediaFactories(value) {
 
     imgLikes.addEventListener("click", function () {
       count++;
-      return (imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart"></i>`);
+      return (imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart" ></i> `);
     });
 
-    console.log(typeof count);
+    console.log(count);
 
     return article;
   }
