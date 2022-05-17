@@ -29,7 +29,7 @@ function mediaFactories(value) {
 
     // Add content
     h2.textContent = title;
-    imgLikes.textContent = likes;
+    imgLikes.innerHTML = `${likes} <i class="fa-solid fa-heart"></i>`;
 
     if (mediaType == "image") {
       article.appendChild(imgMedia);
