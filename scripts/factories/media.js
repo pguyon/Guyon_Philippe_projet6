@@ -49,6 +49,8 @@ function mediaFactories(value) {
       return (imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart"></i>`);
     });
 
+    console.log(typeof count);
+
     return article;
   }
 

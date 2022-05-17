@@ -13,28 +13,34 @@
             <a href="./index.html" aria-label="Link to homepage"><img src="./assets/images/logo.png" class="logo" alt="logo"/></a>
 
         </header>
-
-        <main id="main">
-            <div class="photograph-header">
-                <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <section>
+            <main id="main">
+                <div class="photograph-header">
+                    <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+                </div>
+                <div class="mediaDiv"></div>
+            </main>
+            <div id="contact_modal">
+                <div class="modal">
+                    <header>
+                        <h2>Contactez-moi</h2>
+                        <img src="assets/icons/close.svg" onclick="closeModal()"/>
+                    </header>
+                    <form>
+                        <div>
+                            <label>Prénom</label>
+                            <input/>
+                        </div>
+                        <button class="contact_button">Envoyer</button>
+                    </form>
+                </div>
             </div>
-            <div class="mediaDiv"></div>
-        </main>
-        <div id="contact_modal">
-            <div class="modal">
-                <header>
-                    <h2>Contactez-moi</h2>
-                    <img src="assets/icons/close.svg" onclick="closeModal()"/>
-                </header>
-                <form>
-                    <div>
-                        <label>Prénom</label>
-                        <input/>
-                    </div>
-                    <button class="contact_button">Envoyer</button>
-                </form>
+            <!--Total likes and Price-->
+            <div class="likes__price">
+                <span id="totalLikes"></span>
+                <span id="price"></span>
             </div>
-        </div>
+        </section>
         <script src="./scripts/factories/currentPhotograph.js"></script>
         <script src="./scripts/factories/media.js"></script>
         <script src="./scripts/utils/contactForm.js"></script>
