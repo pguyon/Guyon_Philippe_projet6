@@ -14,16 +14,22 @@ function mediaFactories(value) {
     const imgMedia = document.createElement("img");
     const videoMedia = document.createElement("video");
     const source = document.createElement("source");
+    const descriptionDiv = document.createElement("div");
     const h2 = document.createElement("h2");
+    const imgLikes = document.createElement("span");
 
+    // Add attribute and description
     imgMedia.setAttribute("src", media);
-    imgMedia.alt = `Picture of ${title}`;
+    imgMedia.alt = title;
     source.setAttribute("src", media);
     videoMedia.controls = true;
     videoMedia.autoplay = false;
     videoMedia.muted = false;
+    descriptionDiv.classList.add("img__description");
 
+    // Add content
     h2.textContent = title;
+    imgLikes.textContent = likes;
 
     if (mediaType == "image") {
       article.appendChild(imgMedia);
@@ -31,8 +37,9 @@ function mediaFactories(value) {
       videoMedia.appendChild(source);
       article.appendChild(videoMedia);
     }
-
-    article.appendChild(h2);
+    article.appendChild(descriptionDiv);
+    descriptionDiv.appendChild(h2);
+    descriptionDiv.appendChild(imgLikes);
 
     return article;
   }

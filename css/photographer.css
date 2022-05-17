@@ -153,3 +153,9 @@ form input {
   left: 90%;
   bottom: 0;
 }
+
+.img__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

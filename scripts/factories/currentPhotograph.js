@@ -51,6 +51,7 @@ function currentPhotographFactory(data) {
     tagline,
     id,
     price,
+
     getCurrentUserCardDOM,
   };
 }
