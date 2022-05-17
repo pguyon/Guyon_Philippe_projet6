@@ -47,6 +47,7 @@ function mediaFactories(value) {
 
     descriptionDiv.addEventListener("click", function () {
       console.log(count++);
+      return (imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart"></i>`);
     });
 
     return article;
