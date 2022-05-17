@@ -1,6 +1,5 @@
 function mediaFactories(value) {
   const { photographerId, title, image, video, likes, date, price } = value;
-  const addLikes = document.getElementsByClassName("img__likes");
 
   let mediaType, media;
   let count = likes;
@@ -46,7 +45,6 @@ function mediaFactories(value) {
     descriptionDiv.appendChild(imgLikes);
 
     imgLikes.addEventListener("click", function () {
-      console.log(count++);
       return (imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart"></i>`);
     });
 
