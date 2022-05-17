@@ -1,6 +1,9 @@
 function mediaFactories(value) {
   const { photographerId, title, image, video, likes, date, price } = value;
+  const addLikes = document.getElementsByClassName("img__likes");
+
   let mediaType, media;
+  let count = likes;
 
   mediaType = image ? "image" : "video";
 
@@ -26,6 +29,7 @@ function mediaFactories(value) {
     videoMedia.autoplay = false;
     videoMedia.muted = false;
     descriptionDiv.classList.add("img__description");
+    imgLikes.classList.add("img__likes");
 
     // Add content
     h2.textContent = title;
@@ -41,6 +45,10 @@ function mediaFactories(value) {
     descriptionDiv.appendChild(h2);
     descriptionDiv.appendChild(imgLikes);
 
+    descriptionDiv.addEventListener("click", function () {
+      console.log(count++);
+    });
+
     return article;
   }
 
@@ -52,6 +60,7 @@ function mediaFactories(value) {
     likes,
     date,
     price,
+    count,
     getMediaCardDom,
   };
 }

@@ -159,3 +159,7 @@ form input {
   justify-content: space-between;
   align-items: center;
 }
+
+.img__likes {
+  cursor: pointer;
+}
