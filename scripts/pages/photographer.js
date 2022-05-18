@@ -51,6 +51,7 @@ async function currentPhotographer() {
 
   displayCurrentData(photographer);
   displayMediaData(pictures);
+  console.log(pictures)
 
   return photographer, pictures;
 }

@@ -62,7 +62,7 @@ function mediaFactories(value) {
       array.push(parseInt(allLikes[i].innerHTML));
     }
 
-    console.log(array);
+    //console.log(value);
 
     let total = array.reduce((a, b) => a + b, 0);
     totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart"></i>`;
