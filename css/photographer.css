@@ -116,6 +116,7 @@ form input {
   height: 68px;
   border: none;
   border-radius: 5px;
+  font-size: 36px;
 }
 
 form textarea {
@@ -123,6 +124,7 @@ form textarea {
   height: 250px;
   border: none;
   border-radius: 5px;
+  font-size: 36px;
 }
 
 /* Dev css */
