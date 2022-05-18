@@ -60,7 +60,6 @@ function mediaFactories(value) {
   }
 
   const array = [];
-  const totalArray = [];
 
   for (i = 0; i < allLikes.length; i++) {
     array.push(parseInt(allLikes[i].innerHTML));
