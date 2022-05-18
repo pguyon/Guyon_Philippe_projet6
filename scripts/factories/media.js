@@ -1,7 +1,7 @@
 function mediaFactories(value) {
   const { photographerId, title, image, video, likes, date } = value;
-  const test = document.querySelector(".img__likes");
-  console.log(test);
+  const allLikes = document.querySelectorAll(".img__likes");
+  let totalLikes = document.querySelector("#totalLikes");
 
   let mediaType, media;
   let count = likes;
@@ -51,6 +51,16 @@ function mediaFactories(value) {
       count++;
       return (imgLikes.innerHTML = `${count}<i class="fa-solid fa-heart" ></i>`);
     });
+
+    const array = [];
+
+    for (var i = 0; i < allLikes.length; i++) {
+      array.push(parseInt(allLikes[i].innerHTML));
+    }
+    let total = array.reduce((a, b) => a + b, 0);
+    console.log(total);
+
+    totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart" ></i>`;
 
     return article;
   }
