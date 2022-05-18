@@ -56,19 +56,19 @@ function mediaFactories(value) {
       { once: true }
     );
 
-    const array = [];
-
-    for (i = 0; i < allLikes.length; i++) {
-      array.push(parseInt(allLikes[i].innerHTML));
-    }
-
-    //console.log(value);
-
-    let total = array.reduce((a, b) => a + b, 0);
-    totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart"></i>`;
-
     return article;
   }
+
+  const array = [];
+
+  for (i = 0; i < allLikes.length; i++) {
+    array.push(parseInt(allLikes[i].innerHTML));
+  }
+
+  //console.log(value);
+
+  let total = array.reduce((a, b) => a + b, 0);
+  totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart"></i>`;
 
   return {
     photographerId,
