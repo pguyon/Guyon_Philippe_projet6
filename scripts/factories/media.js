@@ -47,20 +47,25 @@ function mediaFactories(value) {
     descriptionDiv.appendChild(h2);
     descriptionDiv.appendChild(imgLikes);
 
-    imgLikes.addEventListener("click", function () {
-      count++;
-      return (imgLikes.innerHTML = `${count}<i class="fa-solid fa-heart" ></i>`);
-    });
+    imgLikes.addEventListener(
+      "click",
+      function () {
+        count++;
+        return (imgLikes.innerHTML = `${count}<i class="fa-solid fa-heart"></i>`);
+      },
+      { once: true }
+    );
 
     const array = [];
 
-    for (var i = 0; i < allLikes.length; i++) {
+    for (i = 0; i < allLikes.length; i++) {
       array.push(parseInt(allLikes[i].innerHTML));
     }
-    let total = array.reduce((a, b) => a + b, 0);
-    console.log(total);
 
-    totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart" ></i>`;
+    console.log(array);
+
+    let total = array.reduce((a, b) => a + b, 0);
+    totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart"></i>`;
 
     return article;
   }
