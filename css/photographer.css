@@ -167,6 +167,10 @@ form input {
   color: #901c1c;
 }
 
+.img__likes:hover {
+  transform: scale(1.2);
+}
+
 /* Modal dev css */
 
 .error {

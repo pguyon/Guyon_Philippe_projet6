@@ -51,7 +51,7 @@ function mediaFactories(value) {
       "click",
       function () {
         count++;
-        return (imgLikes.innerHTML = `${count}<i class="fa-solid fa-heart"></i>`);
+        return (imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart"></i>`);
       },
       { once: true }
     );
