@@ -70,7 +70,9 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 35px;
-  margin: auto;
+  position: absolute;
+  left: 25%;
+  top: 10%;
 }
 
 .modal header {
@@ -163,4 +165,11 @@ form input {
 .img__likes {
   cursor: pointer;
   color: #901c1c;
+}
+
+/* Modal dev css */
+
+.error {
+  display: none;
+  color: rgb(255, 255, 255);
 }

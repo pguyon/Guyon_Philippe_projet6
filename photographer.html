@@ -26,10 +26,11 @@
                         <h2>Contactez-moi</h2>
                         <img src="assets/icons/close.svg" onclick="closeModal()"/>
                     </header>
-                    <form>
+                    <form id="contact_form" aria-label="formulaire de contact">
                         <div>
-                            <label>Prénom</label>
-                            <input/>
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" title="prenom"/>
+                            <span id="prenom__error" class="error">Veuillez entrer 2 caractères minimum pour votre prénom.</span>
                         </div>
                         <button class="contact_button">Envoyer</button>
                     </form>

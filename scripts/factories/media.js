@@ -1,5 +1,7 @@
 function mediaFactories(value) {
   const { photographerId, title, image, video, likes, date } = value;
+  const test = document.querySelector(".img__likes");
+  console.log(test);
 
   let mediaType, media;
   let count = likes;
@@ -47,10 +49,8 @@ function mediaFactories(value) {
 
     imgLikes.addEventListener("click", function () {
       count++;
-      return (imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart" ></i> `);
+      return (imgLikes.innerHTML = `${count}<i class="fa-solid fa-heart" ></i>`);
     });
-
-    console.log(count);
 
     return article;
   }
