@@ -68,17 +68,12 @@ function mediaFactories(value) {
   console.log(allLikes);
   let total = array.reduce((a, b) => a + b, 0);
   totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart"></i>`;
-  /*   allLikes.addEventListener("click", function () {
-    total++;
-    totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart"></i>`;
-  }); */
 
   function incrementLikes() {
     total++;
     totalLikes.innerHTML = `${total} <i class="fa-solid fa-heart"></i>`;
   }
   allLikes.forEach((btn) => btn.addEventListener("click", incrementLikes));
-  console.log(totalArray);
 
   return {
     photographerId,
