@@ -65,6 +65,7 @@ body {
   border-radius: 5px;
   background-color: #db8876;
   width: 50%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,6 +80,8 @@ body {
 .modal header {
   justify-content: space-between;
   width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .modal header img {
@@ -87,8 +90,14 @@ body {
 
 .modal header h2 {
   font-size: 64px;
-  font-weight: normal;
-  text-align: center;
+  font-weight: normal;  
+  margin: 0;
+}
+
+#modal__name{
+  font-size: 64px;
+  font-weight: normal;  
+  margin: 0;
 }
 
 form {

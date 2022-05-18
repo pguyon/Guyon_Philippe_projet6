@@ -2,6 +2,7 @@ function currentPhotographFactory(data) {
   const { name, portrait, city, country, tagline, id, price } = data;
   const picture = `./assets/photographers/${portrait}`;
   const currentPrice = document.querySelector("#price");
+  const modalName = document.querySelector('#modal__name')
 
   function getCurrentUserCardDOM() {
     // Création des éléments de photographer_section
@@ -37,6 +38,8 @@ function currentPhotographFactory(data) {
 
     return photographHeader, infosPhotographDiv;
   }
+
+  modalName.textContent = name;
 
   return {
     name,
