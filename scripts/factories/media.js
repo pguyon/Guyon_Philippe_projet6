@@ -25,7 +25,6 @@ function mediaFactories(value) {
     const descriptionDiv = document.createElement("div");
     const h2 = document.createElement("h2");
     const imgLikes = document.createElement("span");
-    const imgIcons = document.createElement("i");
 
     // Ajouts des attributs et des descriptions
     imgMedia.setAttribute("src", media);
@@ -37,13 +36,10 @@ function mediaFactories(value) {
     descriptionDiv.classList.add("img__description");
     imgLikes.classList.add("img__likes");
     imgLikes.ariaLabel = "Total de likes";
-    imgIcons.setAttribute("aria-hidden", "true");
 
     // Ajouts du contenu
     h2.textContent = title;
-    imgLikes.innerHTML = `${likes}`;
-    imgIcons.classList.add("fa-solid");
-    imgIcons.classList.add("fa-heart");
+    imgLikes.innerHTML = `${likes} <i class="fa-solid fa-heart"></i>`;
 
     // Ajouts des éléments
     if (mediaType == "image") {
@@ -55,7 +51,6 @@ function mediaFactories(value) {
     article.appendChild(descriptionDiv);
     descriptionDiv.appendChild(h2);
     descriptionDiv.appendChild(imgLikes);
-    imgLikes.appendChild(imgIcons);
 
     // Incrémentation du nombre de likes
     imgLikes.addEventListener(
