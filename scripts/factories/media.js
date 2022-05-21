@@ -85,6 +85,16 @@ function mediaFactories(value) {
   }
   allLikes.forEach((btn) => btn.addEventListener("click", incrementLikes));
 
+  (function () {
+    let getIcons = document.querySelectorAll("i");
+    getIcons.forEach(function (iconEach) {
+      let getIconAttr = iconEach.getAttribute("aria-hidden");
+      if (!getIconAttr) {
+        iconEach.setAttribute("aria-hidden", "true");
+      }
+    });
+  })();
+
   return {
     photographerId,
     title,
