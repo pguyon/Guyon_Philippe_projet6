@@ -21,7 +21,7 @@ function photographerFactory(data) {
 
     // Ajouts des attributs sur l'image
     img.setAttribute("src", picture);
-    img.alt = `Photo de ${name}`;
+    img.alt = name;
 
     // Ajouts des valeurs sur les éléments
     h2.textContent = name;

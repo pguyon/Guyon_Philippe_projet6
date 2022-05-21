@@ -2,7 +2,7 @@ function currentPhotographFactory(data) {
   const { name, portrait, city, country, tagline, id, price } = data;
   const picture = `./assets/photographers/${portrait}`;
   const currentPrice = document.querySelector("#price");
-  const modalName = document.querySelector('#modal__name')
+  const modalName = document.querySelector("#modal__name");
 
   function getCurrentUserCardDOM() {
     // Création des éléments de photographer_section
@@ -15,12 +15,10 @@ function currentPhotographFactory(data) {
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
     const priceDiv = document.createElement("div");
-    //const globalLikes = document.createElement("span");
-    //const tarif = document.createElement("span");
 
     // Ajouts des attributs sur l'image
     img.setAttribute("src", picture);
-    img.alt = `Photo de ${name}`;
+    img.alt = name;
 
     // Ajouts des valeurs sur les éléments
     h2.textContent = name;
