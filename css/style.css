@@ -73,3 +73,8 @@ a {
   border-radius: 50%;
   object-fit: cover;
 }
+
+button {
+  background-color: inherit;
+  border: none;
+}

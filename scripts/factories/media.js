@@ -24,7 +24,7 @@ function mediaFactories(value) {
     const source = document.createElement("source");
     const descriptionDiv = document.createElement("div");
     const h2 = document.createElement("h2");
-    const imgLikes = document.createElement("span");
+    const imgLikes = document.createElement("button");
 
     // Ajouts des attributs et des descriptions
     imgMedia.setAttribute("src", media);
@@ -53,14 +53,11 @@ function mediaFactories(value) {
     descriptionDiv.appendChild(imgLikes);
 
     // Incrémentation du nombre de likes
-    imgLikes.addEventListener(
-      "click",
-      function () {
-        count++;
-        imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart"></i>`;
-      },
-      { once: true }
-    );
+    imgLikes.addEventListener("click", function () {
+      count++;
+      imgLikes.innerHTML = `${count} <i class="fa-solid fa-heart"></i>`;
+      imgLikes.setAttribute("disabled", "true");
+    });
 
     return article;
   }
