@@ -129,6 +129,11 @@ form input {
   padding-left: 10px;
 }
 
+form input:hover,
+form input:focus {
+  background-color: rgb(221, 220, 220);
+}
+
 form textarea {
   width: 100%;
   height: 250px;
