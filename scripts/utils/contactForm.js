@@ -24,7 +24,8 @@ function checkFirstname() {
 
 function validate(e) {
   e.preventDefault();
-  checkFirstname();
+  const firstValue = document.getElementById("prenom").value.trim();
+  console.log(firstValue);
 }
 
 firstname.addEventListener("keyup", checkFirstname);
