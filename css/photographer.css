@@ -130,7 +130,9 @@ form input {
 }
 
 form input:hover,
-form input:focus {
+form input:focus,
+form textarea:hover,
+form textarea:focus {
   background-color: rgb(221, 220, 220);
 }
 
