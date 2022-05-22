@@ -29,20 +29,22 @@
                         </div>
                         <img src="assets/icons/close.svg" onclick="closeModal()"/>
                     </header>
-                    <form id="contact_form" aria-label="formulaire de contact" method="post" onsubmit="validate(event)">
-                        <div>
+                    <form
+                        id="contact_form" aria-label="formulaire de contact" method="post" onsubmit="validate(event)">
+                        <!--Ajout d'un groupe pour les coordonnées de l'utilisateur-->
+                        <div role="group" aria-labelledby="coordonnees">
                             <label for="prenom">Prénom</label>
-                            <input type="text" id="prenom" name="prenom" title="prenom"/>
+                            <input type="text" id="prenom" name="prenom" title="prenom" placeholder="John"/>
                             <span id="prenom__error" class="error">Veuillez entrer 2 caractères minimum pour votre prénom.</span>
-                        </div>
-                        <div>
+
+
                             <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom" title="nom"/>
+                            <input type="text" id="nom" name="nom" title="nom" placeholder="Doe"/>
                             <span id="nom__error" class="error">Veuillez entrer 2 caractères minimum pour votre nom.</span>
-                        </div>
-                        <div>
+
+
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" title="email"/>
+                            <input type="email" id="email" name="email" title="email" placeholder="jdoe@exemple.com"/>
                             <span id="email__error" class="error">Email n on valide.</span>
                         </div>
                         <div>

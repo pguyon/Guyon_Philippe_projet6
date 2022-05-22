@@ -26,13 +26,14 @@ function mediaFactories(value) {
     const h2 = document.createElement("h2");
     const imgLikes = document.createElement("button");
 
-    // Ajouts des attributs et des descriptions
-    imgMedia.setAttribute("src", media);
-    imgMedia.alt = title;
-    source.setAttribute("src", media);
+    // Ajout du contrôle des vidéos
     videoMedia.controls = true;
     videoMedia.autoplay = false;
     videoMedia.muted = false;
+    // Ajout des attributs et des descriptions
+    imgMedia.setAttribute("src", media);
+    imgMedia.alt = title;
+    source.setAttribute("src", media);
     descriptionDiv.classList.add("img__description");
     imgLikes.classList.add("img__likes");
     imgLikes.ariaLabel = "Total de likes";
