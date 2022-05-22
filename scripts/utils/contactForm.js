@@ -1,13 +1,18 @@
+const btnCloseModal = document.getElementById("close__modal__btn");
+
 function displayModal() {
   const modal = document.getElementById("contact_modal");
-  modal.style.display = "block";
   document.getElementById("main").setAttribute("aria-hidden", "true");
+  document.getElementById("contact_modal").setAttribute("aria-hidden", "false");
+  btnCloseModal.focus();
+  modal.style.display = "block";
 }
 
 function closeModal() {
   const modal = document.getElementById("contact_modal");
-  modal.style.display = "none";
   document.getElementById("main").setAttribute("aria-hidden", "false");
+  document.getElementById("contact_modal").setAttribute("aria-hidden", "true");
+  modal.style.display = "none";
 }
 
 const btnSubmit = document.getElementsByClassName("contact_button")[0];
