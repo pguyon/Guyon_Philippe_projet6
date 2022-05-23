@@ -56,7 +56,6 @@ function checkFirstname() {
   } else {
     firstnameError.classList.add("error");
     firstnameRegexError.classList.add("regex__error");
-    console.log("Prénom : ", firstname);
     return true;
   }
 }
@@ -79,7 +78,6 @@ function checklastname() {
   } else {
     lastnameError.classList.add("error");
     lastnameRegexError.classList.add("regex__error");
-    console.log("Nom : ", lastname);
     return true;
   }
 }
@@ -121,9 +119,21 @@ message.addEventListener("keyup", checkMessage);
 
 // Validation du formulaire
 function validate(e) {
-  e.preventDefault();
-  const firstValue = document.getElementById("prenom").value.trim();
-  console.log(firstValue);
+  const textValue = document.getElementById("message").value.trim();
+  const lastname = document.getElementById("nom").value.trim();
+  const firstname = document.getElementById("prenom").value.trim();
+  const emailValue = document.getElementById("email").value.trim();
+  if (checkFirstname && checklastname && checkEmail && checkMessage) {
+    e.preventDefault();
+    console.log("Prénom : ", firstname);
+    console.log("Nom : ", lastname);
+    console.log("Email : ", emailValue);
+    console.log("Message : ", textValue);
+    return true;
+  } else {
+    e.preventDefault();
+    return false;
+  }
 }
 
 // Focus sur le modal pour l'accessibilité
