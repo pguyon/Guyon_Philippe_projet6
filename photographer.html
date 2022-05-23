@@ -34,25 +34,27 @@
                         <!--Ajout d'un groupe pour les coordonnées de l'utilisateur-->
                         <div role="group" aria-labelledby="coordonnees">
                             <label for="prenom">Prénom</label>
-                            <input type="text" id="prenom" name="prenom" title="prenom" placeholder="John" aria-required="true"/>
-                            <span id="prenom__error" class="error">Veuillez entrer 2 caractères minimum pour votre prénom.</span>
-                            <span id="prenom__regex__error" class="regex__error">Uniquement des lettres.</span>
+                            <input type="text" id="prenom" name="prenom" title="prenom" aria-required="true"/>
+                            <span id="prenom__error" class="error error__color">Veuillez entrer 2 caractères minimum pour votre prénom.</span>
+                            <span id="prenom__regex__error" class="regex__error error__color">Uniquement des lettres.</span>
 
 
                             <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom" title="nom" placeholder="Doe" aria-required="true"/>
-                            <span id="nom__error" class="error">Veuillez entrer 2 caractères minimum pour votre nom.</span>
-                            <span id="nom__regex__error" class="regex__error">Uniquement des lettres.</span>
+                            <input type="text" id="nom" name="nom" title="nom" aria-required="true"/>
+                            <span id="nom__error" class="error error__color">Veuillez entrer 2 caractères minimum pour votre nom.</span>
+                            <span id="nom__regex__error" class="regex__error error__color">Uniquement des lettres.</span>
 
 
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" title="email" placeholder="jdoe@exemple.com" aria-required="true"/>
-                            <span id="email__error" class="error">Email n on valide.</span>
+                            <input type="email" id="email" name="email" title="email" aria-required="true"/>
+                            <span id="email__error" class="error error__color">Veuillez saisir votre email.</span>
+                            <span id="email__regex__error" class="regex__error error__color">email non valide.</span>
+
                         </div>
                         <div>
                             <label for="message">Votre message</label>
                             <textarea id="message" name="message" title="message" rows="5" type="text" aria-required="true" placeholder="Votre message..."></textarea>
-                            <span id="textarea__error" class="error">Veuillez entrer un message.</span>
+                            <span id="textarea__error" class="error error__color">Votre message doit faire au moins 10 caractères.</span>
                         </div>
                         <button class="contact_button" type="submit">Envoyer</button>
                     </form>

@@ -208,6 +208,10 @@ form textarea {
   display: none;
 }
 
+.error__color {
+  color: white;
+}
+
 input {
   margin-bottom: 10px;
 }

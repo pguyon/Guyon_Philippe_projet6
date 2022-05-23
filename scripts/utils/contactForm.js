@@ -10,6 +10,15 @@ const lastname = document.getElementById("nom");
 const lastnameError = document.getElementById("nom__error");
 const lastnameRegexError = document.getElementById("nom__regex__error");
 
+// Variables de l'email
+const email = document.getElementById("email");
+const emailError = document.getElementById("email__error");
+const emailRegexError = document.getElementById("email__regex__error");
+
+// Variables du message
+const message = document.getElementById("message");
+const textAreaError = document.getElementById("textarea__error");
+
 // Création des REGEX
 const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const regexText = /^[A-Za-z]+$/;
@@ -29,7 +38,7 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-// Vérification des données
+// Vérification du prénom
 function checkFirstname() {
   const firstname = document.getElementById("prenom").value.trim();
   if (!firstname) {
@@ -52,6 +61,7 @@ function checkFirstname() {
   }
 }
 
+// Vérification du nom
 function checklastname() {
   const lastname = document.getElementById("nom").value.trim();
   if (!lastname) {
@@ -74,8 +84,40 @@ function checklastname() {
   }
 }
 
+// Vérification du message
+function checkMessage() {
+  const textValue = document.getElementById("message").value.trim();
+  if (!textValue || textValue.length <= 10) {
+    textAreaError.classList.remove("error");
+    return false;
+  } else {
+    textAreaError.classList.add("error");
+    return true;
+  }
+}
+
+// Vérification de l'email
+function checkEmail() {
+  const emailValue = document.getElementById("email").value.trim();
+  if (!emailValue) {
+    emailError.classList.remove("error");
+    emailRegexError.classList.add("regex__error");
+    return false;
+  } else if (!regexEmail.test(emailValue)) {
+    emailRegexError.classList.remove("regex__error");
+    emailError.classList.add("error");
+    return false;
+  } else {
+    emailRegexError.classList.add("regex__error");
+    emailError.classList.add("error");
+    return true;
+  }
+}
+
 firstname.addEventListener("keyup", checkFirstname);
 lastname.addEventListener("keyup", checklastname);
+email.addEventListener("keyup", checkEmail);
+message.addEventListener("keyup", checkMessage);
 
 // Validation du formulaire
 function validate(e) {
