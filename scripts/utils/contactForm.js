@@ -1,10 +1,10 @@
-const btnCloseModal = document.getElementById("close__modal__btn");
+const btnSubmit = document.getElementsByClassName("contact_button")[0];
+const firstname = document.getElementById("prenom");
 
 function displayModal() {
   const modal = document.getElementById("contact_modal");
   document.getElementById("main").setAttribute("aria-hidden", "true");
   document.getElementById("contact_modal").setAttribute("aria-hidden", "false");
-  btnCloseModal.focus();
   modal.style.display = "block";
 }
 
@@ -14,9 +14,6 @@ function closeModal() {
   document.getElementById("contact_modal").setAttribute("aria-hidden", "true");
   modal.style.display = "none";
 }
-
-const btnSubmit = document.getElementsByClassName("contact_button")[0];
-const firstname = document.getElementById("prenom");
 
 function checkFirstname() {
   const firstname = document.getElementById("prenom").value.trim();
@@ -36,3 +33,9 @@ function validate(e) {
 }
 
 firstname.addEventListener("keyup", checkFirstname);
+
+function getfocus() {
+  document.getElementById('close__modal__btn').focus();
+}
+
+document.querySelector(".header__contact__button").addEventListener("click", getfocus);
