@@ -2,6 +2,8 @@ function mediaFactories(value) {
   const { photographerId, title, image, video, likes, date } = value;
   const allLikes = document.querySelectorAll(".img__likes");
   const totalLikes = document.querySelector("#totalLikes");
+  const testPictures = Array.from(document.getElementsByClassName("media"));
+  console.log(testPictures);
 
   // Création des variables pour la gestion des types de médias et du compteur de likes
   let mediaType, media;
@@ -37,6 +39,8 @@ function mediaFactories(value) {
     descriptionDiv.classList.add("img__description");
     imgLikes.classList.add("img__likes");
     imgLikes.ariaLabel = "Total de likes";
+    videoMedia.classList.add("media");
+    imgMedia.classList.add("media");
 
     // Ajouts du contenu
     h2.textContent = title;
