@@ -202,8 +202,10 @@ form textarea {
 
 .error {
   display: none;
-  color: rgb(255, 255, 255);
-  margin-bottom: 10px;
+}
+
+.regex__error {
+  display: none;
 }
 
 input {
