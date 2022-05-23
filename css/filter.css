@@ -1,0 +1,22 @@
+#filter {
+  margin-top: 20px;
+}
+
+#filter__title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+#filter__choice {
+  background-color: #901c1c;
+  color: white;
+  font-size: 26px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#filter__choice option {
+  color: white;
+  font-size: 26px;
+}

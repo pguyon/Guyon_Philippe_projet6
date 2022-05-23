@@ -18,6 +18,13 @@
                 <div class="photograph-header">
                     <button class="contact_button header__contact__button" onclick="displayModal()">Contactez-moi</button>
                 </div>
+                <div id="filter" role='filtre'>
+                    <label for="filter__choice" id="filter__title">Trier par</label>
+                    <select name="choice" id="filter__choice">
+                        <option selected value="popularaire">Popularité</option>
+                        <option value="titre">Titre</option>
+                    </select>
+                </div>
                 <div class="mediaDiv"></div>
             </main>
             <div id="contact_modal" role="dialog" aria-hidden="true" tabindex="0">
