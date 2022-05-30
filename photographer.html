@@ -1,82 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <meta charset="utf-8">
-        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./css/style.css" rel="stylesheet"/>
+        <link rel="icon" href="./assets/images/favicon.ico">
         <script src="https://kit.fontawesome.com/07ef921c81.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-        <title>Fisheye - photographe</title>
+        <title>Fisheye - photographe
+        </title>
     </head>
     <body>
         <header>
-            <a href="./index.html"><img src="./assets/images/logo.png" class="logo" alt="logo fisheye - Page d'accueil"/></a>
-
+            <nav aria-label="Navigation Page Accueil">
+                <a tabindex="0" href="./index.html">
+                    <img src="./assets/images/logo.png" class="logo" alt="Fisheye"/>
+                </a>
+            </nav>
         </header>
-        <section>
-            <main id="main" aria-hidden="false">
-                <div class="photograph-header">
-                    <button class="contact_button header__contact__button" onclick="displayModal()">Contactez-moi</button>
-                </div>
-                <div id="filter" role='filtre'>
-                    <label for="filter__choice" id="filter__title">Trier par</label>
-                    <select name="choice" id="filter__choice">
-                        <option selected value="popularaire">Popularité</option>
-                        <option value="titre">Titre</option>
+        <main id="main">
+            <section class="photograph-header"></section>
+            <section class="gallery">
+                <div class="filter">
+                    <label for="filter__select" id="filter__label">Trier par</label>
+                    <select aria-labelledby="filter__select" name="filters" id="filter__select">
+                        <option selected value="Popularité">Popularité</option>
+                        <option value="Titre">Titre</option>
                     </select>
                 </div>
                 <div class="mediaDiv"></div>
-            </main>
-            <div id="contact_modal" role="dialog" aria-hidden="true" tabindex="0">
-                <div class="modal">
-                    <header>
-                        <div id="presentation">
-                            <h2>Contactez-moi</h2>
-                            <h3 id="modal__name"></h3>
-                        </div>
-                        <button aria-label="bouton fermer" onclick="closeModal()" id="close__modal__btn"><img src="assets/icons/close.svg" alt="close button"/></button>
-                    </header>
-                    <form
-                        id="contact_form" aria-label="formulaire de contact" method="post" onsubmit="validate(event)">
-                        <!--Ajout d'un groupe pour les coordonnées de l'utilisateur-->
-                        <div role="group" aria-labelledby="coordonnees">
-                            <label for="prenom">Prénom</label>
-                            <input type="text" id="prenom" name="prenom" title="prenom" aria-required="true"/>
-                            <span id="prenom__error" class="error error__color">Veuillez entrer 2 caractères minimum pour votre prénom.</span>
-                            <span id="prenom__regex__error" class="regex__error error__color">Uniquement des lettres.</span>
-
-
-                            <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom" title="nom" aria-required="true"/>
-                            <span id="nom__error" class="error error__color">Veuillez entrer 2 caractères minimum pour votre nom.</span>
-                            <span id="nom__regex__error" class="regex__error error__color">Uniquement des lettres.</span>
-
-
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" title="email" aria-required="true"/>
-                            <span id="email__error" class="error error__color">Veuillez saisir votre email.</span>
-                            <span id="email__regex__error" class="regex__error error__color">email non valide.</span>
-
-                        </div>
-                        <div>
-                            <label for="message">Votre message</label>
-                            <textarea id="message" name="message" title="message" rows="5" type="text" aria-required="true" placeholder="Votre message..."></textarea>
-                            <span id="textarea__error" class="error error__color">Votre message doit faire au moins 10 caractères.</span>
-                        </div>
-                        <button class="contact_button" type="submit">Envoyer</button>
-                    </form>
+            </section>
+            <div class="likes__price" tabindex="0">
+                <div class="totalLikes">
+                    <div id="like__counter"></div>
+                    <span aria-label="likes" class="fa-solid fa-heart"></span>
                 </div>
+                <div id="price"></div>
             </div>
-            <!--Total likes and Price-->
-            <div class="likes__price">
-                <span id="totalLikes"></span>
-                <span id="price"></span>
-            </div>
-        </section>
-        <script src="./scripts/factories/currentPhotograph.js"></script>
-        <script src="./scripts/factories/media.js"></script>
-        <script src="./scripts/utils/contactForm.js"></script>
-        <script src="./scripts/pages/photographer.js"></script>
+        </main>
+        <div id="contact_modal" role="dialog" aria-hidden="true" tabindex="0" aria-describedby="contact_modal">
+            <div class="modal">
+                <header>
+                    <h2 id="contact-title" tabindex="0">Contactez moi</h2>
+                    <button tabindex="0" aria-label="Close Contact form" id="closeModal"><img src="./assets/icons/close.svg" alt="Bouton de fermeture du formulaire"/></button>
+                </header>
+                <form id="contact-form" method="post">
+                    <div role="group" aria-labelledby="coordonnees" id="coordonnees">
+                        <label for="firstName" id="firstNameLabel">Prénom</label>
+                        <input class="input" id="firstName" name="firstName" aria-labelledby="firstNameLabel" aria-required="true"/>
+                        <span id="firstName__error" class="error error__color">Veuillez entrer 2 caractères minimum pour votre prénom.</span>
+                        <span id="firstName__regex__error" class="regex__error error__color">Uniquement des lettres.</span>
 
+
+                        <label for="lastName" id="lastNameLabel">Nom</label>
+                        <input class="input" id="lastName" name="lastName" aria-labelledby="lastNameLabel" aria-required="true"/>
+                        <span id="lastName__error" class="error error__color">Veuillez entrer 2 caractères minimum pour votre prénom.</span>
+                        <span id="lastName__regex__error" class="regex__error error__color">Uniquement des lettres.</span>
+
+
+                        <label for="email" id="emailLabel">Email</label>
+                        <input class="input" id="email" name="email" aria-labelledby="emailLabel" aria-required="true"/>
+                        <span id="email__error" class="error error__color">Veuillez saisir votre email.</span>
+                        <span id="email__regex__error" class="regex__error error__color">email non valide.</span>
+                    </div>
+                    <div>
+                        <label for="message" id="messageLabel">Votre message</label>
+                        <textarea class="input" id="message" name="message" aria-labelledby="messageLabel" rows="6" aria-required="true"></textarea>
+                        <span id="textarea__error" class="error error__color">Votre message doit faire au moins 10 caractères.</span>
+                    </div>
+                    <button aria-label="Envoyer le formualire de contact" class="contact_button" type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+        <div id="lightboxmodal" role="dialog" aria-label="Media en gros plan" aria-hidden="true" tabindex="0">
+            <div id="lightbox">
+                <button aria-label="Fermeture" id="close__lightbox"><img src="./assets/icons/close.svg" alt="bouton de fermeture de la ligthbox"/></button>
+                <a tabindex="0" aria-label="Previous Media" id="prev__lightbox"><img class="horizontal-reverse" src="./assets/icons/arrow.svg" alt="Previous media button"/></a>
+                <div id="media__lightbox"></div>
+                <a tabindex="0" aria-label="Next media" id="next__lightbox"><img src="./assets/icons/arrow.svg" alt="Next media button"/></a>
+            </div>
+        </div>
+        <script src="./scripts/factories/photographerFactory.js"></script>
+        <script src="./scripts/factories/mediaFactory.js"></script>
+        <script src="./scripts/utils/contactForm.js"></script>
+        <script src="./scripts/utils/lightbox.js"></script>
+        <script src="./scripts/pages/photographer.js"></script>
     </body>
 </html>

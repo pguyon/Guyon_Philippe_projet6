@@ -26,19 +26,23 @@ body {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  order: 3;
   object-fit: cover;
 }
 
-.photograph-header h2 {
+.photograph-header h1 {
   font-size: 36px;
   color: #d3573c;
   margin: 0;
 }
 
-.photograph-header h3 {
+.photograph-header h2 {
   color: #901c1c;
   font-weight: 200;
+  margin: 0;
+}
+
+.photograph-header p {
+  margin-top: 5px;
 }
 
 .contact_button {
@@ -52,7 +56,6 @@ body {
   background-color: #901c1c;
   border-radius: 5px;
   cursor: pointer;
-  order: 2;
 }
 
 .contact_button:hover,
@@ -154,6 +157,14 @@ form textarea {
   width: 100%;
 }
 
+.mediaDiv article {
+  cursor: pointer;
+}
+
+.mediaDiv article:hover {
+  transform: scale(1.02);
+}
+
 .mediaDiv article h2 {
   color: #901c1c;
   font-size: 18px;
@@ -189,13 +200,21 @@ form textarea {
   align-items: center;
 }
 
-.img__likes {
+.likes {
   cursor: pointer;
   color: #901c1c;
 }
 
-.img__likes:hover {
+.likes:hover {
   transform: scale(1.2);
+}
+
+.totalLikes {
+  display: flex;
+}
+
+#like__counter {
+  margin-right: 5px;
 }
 
 /* Modal dev css */

@@ -1,25 +1,22 @@
-async function getPhotographers() {
+// Récupération des données du JSON
+const getData = async () => {
   await fetch("./data/photographers.json")
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error("Une erreur c'est produite");
-      }
-      return res.json();
-    })
-    .then((data) => {
-      photographers = data.photographers;
-      displayData(photographers);
-    });
-  return photographers;
-}
+    .then((response) => response.json())
+    .then((data) => createPhotographersCard(data))
+    .catch((error) => console.log(error));
+};
 
-async function displayData(photographers) {
-  const photographersSection = document.querySelector(".photographer_section");
-  photographers.map((photographer) => {
-    const photographerModel = photographerFactory(photographer);
-    const userCardDOM = photographerModel.getUserCardDOM();
-    photographersSection.appendChild(userCardDOM);
+// Création de la CARD
+const createPhotographersCard = (data) => {
+  let template = "";
+  const photographersData = [];
+  const section = document.querySelector(".photographer_section");
+  photographersData.push(data.photographers);
+  photographersData[0].forEach((photographer) => {
+    const newPhotographer = new PhotographerFactory(photographer);
+    template += newPhotographer.createCard();
   });
-}
+  section.innerHTML = template;
+};
 
-getPhotographers();
+getData();

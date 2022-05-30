@@ -1,0 +1,60 @@
+#lightboxmodal {
+  display: none;
+  padding-top: 150px;
+}
+
+#lightbox {
+  width: 750px;
+  height: 750px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#close__lightbox {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 160px;
+  right: 30%;
+  cursor: pointer;
+}
+
+#prev__lightbox {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+#next__lightbox {
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  cursor: pointer;
+}
+
+#media__lightbox article {
+  margin: auto;
+  width: 600px;
+}
+
+#media img,
+#media video {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.2);
+}
+.mediaDiv {
+  margin-top: 2rem;
+}
+
+.media__lightbox {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+}

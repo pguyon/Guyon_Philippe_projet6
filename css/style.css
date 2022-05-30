@@ -1,5 +1,6 @@
 @import url("photographer.css");
 @import url("filter.css");
+@import url("lightbox.css");
 
 body {
   font-family: "DM Sans", sans-serif;
@@ -45,16 +46,24 @@ a {
   align-items: center;
   flex-direction: column;
   cursor: pointer;
+  text-align: center;
 }
 
 .photographer_section article h2 {
   color: #d3573c;
   font-size: 36px;
   margin-bottom: 0px;
+  text-align: center;
 }
-.photographer_section article h3 {
-  color: #901c1c;
-  font-size: 20px;
+
+.photographer__description {
+  text-align: center;
+}
+
+.photographer__location {
+  color: #901c1c !important;
+  font-size: 20px !important;
+  font-weight: bold;
   margin: 0px;
 }
 .photographer_section article p {

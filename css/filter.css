@@ -1,14 +1,14 @@
-#filter {
+.filter {
   margin-top: 20px;
 }
 
-#filter__title {
+#filter__label {
   font-size: 26px;
   font-weight: bold;
   margin-right: 20px;
 }
 
-#filter__choice {
+#filter__select {
   background-color: #901c1c;
   color: white;
   font-size: 26px;
@@ -16,7 +16,7 @@
   padding: 10px;
 }
 
-#filter__choice option {
+#filter__select option {
   color: white;
   font-size: 26px;
 }
