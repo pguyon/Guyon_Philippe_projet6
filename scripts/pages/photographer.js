@@ -1,6 +1,8 @@
 // Récupération de l'ID dans l'URL
-const path = window.location.href;
-const photographerId = parseInt(path.substring(path.lastIndexOf("=") + 1));
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const photographerId = parseInt(urlParams.get("id"));
+//console.log(photographerId);
 
 // Récupération des données du JSON
 const getData = async () => {
