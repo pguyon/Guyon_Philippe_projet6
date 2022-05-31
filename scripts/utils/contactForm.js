@@ -121,6 +121,7 @@ const openModal = () => {
   const modal = document.getElementById("contact_modal");
   modal.style.display = "block";
   modal.setAttribute("aria-hidden", "false");
+  document.getElementById('main').setAttribute('aria-hidden', "true")
 };
 
 // Fermeture du modal
@@ -128,6 +129,8 @@ const closeModal = () => {
   const modal = document.getElementById("contact_modal");
   modal.style.display = "none";
   modal.setAttribute("aria-hidden", "true");
+  document.getElementById('main').setAttribute('aria-hidden', "false")
+
 };
 
 const addModalEvents = () => {
