@@ -14,8 +14,8 @@ class PhotographerFactory {
   // Création de la Card photographe
   createCard() {
     return `<article>
-        <a href="./photographer.html?id=${this.id}" aria-label="${this.name}">
-            <img src="./assets/photographers/${this.portrait}" alt="${this.name}">
+        <a href="./photographer.html?id=${this.id}" aria-label="En savoir plus sur ${this.name}">
+            <img src="./assets/photographers/${this.portrait}" alt="Photo de ${this.name}">
             <h2>${this.name}</h2>
         </a>
         <div tabindex="0" class="photographer__description">
