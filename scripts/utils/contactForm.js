@@ -122,6 +122,7 @@ const openModal = () => {
   modal.style.display = "block";
   modal.setAttribute("aria-hidden", "false");
   document.getElementById('main').setAttribute('aria-hidden', "true")
+  modal.focus();
 };
 
 // Fermeture du modal

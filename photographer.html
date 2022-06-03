@@ -18,26 +18,6 @@
                 </a>
             </nav>
         </header>
-        <main id="main" aria-hidden="" false>
-            <section class="photograph-header"></section>
-            <section class="gallery">
-                <div class="filter">
-                    <label for="filter__select" id="filter__label">Trier par</label>
-                    <select aria-labelledby="filter__select" name="filters" id="filter__select">
-                        <option selected value="Popularité">Popularité</option>
-                        <option value="Titre">Titre</option>
-                    </select>
-                </div>
-                <div class="mediaDiv"></div>
-            </section>
-            <div class="likes__price" tabindex="0">
-                <div class="totalLikes">
-                    <div id="like__counter"></div>
-                    <span aria-label="likes" class="fa-solid fa-heart"></span>
-                </div>
-                <div id="price"></div>
-            </div>
-        </main>
         <div id="contact_modal" role="dialog" aria-hidden="true" tabindex="0" aria-describedby="contact_modal">
             <div class="modal">
                 <header>
@@ -72,6 +52,27 @@
                 </form>
             </div>
         </div>
+        <main id="main" aria-hidden="" false>
+            <section class="photograph-header"></section>
+            <section class="gallery">
+                <div class="filter">
+                    <label for="filter__select" id="filter__label">Trier par</label>
+                    <select aria-labelledby="filter__select" name="filters" id="filter__select">
+                        <option selected value="Popularité">Popularité</option>
+                        <option value="Titre">Titre</option>
+                    </select>
+                </div>
+                <div class="mediaDiv"></div>
+            </section>
+            <div class="likes__price" tabindex="0">
+                <div class="totalLikes">
+                    <div id="like__counter"></div>
+                    <span aria-label="likes" class="fa-solid fa-heart"></span>
+                </div>
+                <div id="price"></div>
+            </div>
+        </main>
+
         <div id="lightboxmodal" role="dialog" aria-label="Media en gros plan" aria-hidden="true" tabindex="0">
             <div id="lightbox">
                 <button aria-label="Fermeture" id="close__lightbox"><img src="./assets/icons/close.svg" alt="bouton de fermeture de la ligthbox"/></button>
