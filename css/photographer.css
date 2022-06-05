@@ -158,7 +158,16 @@ form textarea {
 }
 
 .mediaDiv article {
+  overflow: hidden;
+}
+
+.mediaDiv article img {
+  transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.mediaDiv article img:hover {
+  transform: scale(1.03);
 }
 
 .mediaDiv article h2 {
