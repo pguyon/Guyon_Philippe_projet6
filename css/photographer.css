@@ -161,10 +161,6 @@ form textarea {
   cursor: pointer;
 }
 
-.mediaDiv article:hover {
-  transform: scale(1.02);
-}
-
 .mediaDiv article h2 {
   color: #901c1c;
   font-size: 18px;
@@ -203,10 +199,11 @@ form textarea {
 .likes {
   cursor: pointer;
   color: #901c1c;
+  transition: all 0.3s ease;
 }
 
 .likes:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 .totalLikes {
