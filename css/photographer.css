@@ -161,14 +161,17 @@ form textarea {
   overflow: hidden;
 }
 
-.mediaDiv article img {
+.mediaDiv article img,
+.mediaDiv article video {
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.mediaDiv article img:hover {
+.mediaDiv article img:hover,
+.mediaDiv article video:hover {
   transform: scale(1.03);
 }
+
 
 .mediaDiv article h2 {
   color: #901c1c;
