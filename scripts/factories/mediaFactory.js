@@ -22,9 +22,9 @@ class Image {
   // Création du template -> si le media est une image
   createHTML() {
     return `
-          <article class="card ligthbox__card" data-date="${this.date}" data-title="${
-      this.title
-    }" data-likes=${this.likes}>
+          <article class="card ligthbox__card" data-date="${
+            this.date
+          }" data-title="${this.title}" data-likes=${this.likes}>
           <a tabindex="0" class="media-link"><img class="media media__lightbox" aria-label="${
             this.title
           }" src="./assets/images/${getPhotographerName(this.photographerId)}/${
@@ -54,10 +54,10 @@ class Video {
   // Création du template -> si le media est une vidéo
   createHTML() {
     return `
-          <article class="card ligthbox__card" data-date="${this.date}" data-title="${
-      this.title
-    }" data-likes=${this.likes}>
-          <a tabindex="0" class="media-link paused-video"><video controls class="media media__lightbox" aria-label="${
+          <article class="card ligthbox__card" data-date="${
+            this.date
+          }" data-title="${this.title}" data-likes=${this.likes}>
+          <a tabindex="0" class="media-link paused-video"><video  class="media media__lightbox" aria-label="${
             this.title
           }" title="${this.title}" src="./assets/images/${getPhotographerName(
       this.photographerId
