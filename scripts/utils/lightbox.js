@@ -38,6 +38,7 @@ const openLightbox = (event) => {
   // Affichage du contenu de la lightbox
   document.getElementById("lightboxmodal").style.display = "block";
   document.getElementById("lightboxmodal").setAttribute("aria-hidden", "false");
+  // Ajout du contenu du noeud du media clické ainsi que ses enfants.
   document
     .getElementById("media__lightbox")
     .appendChild(medias[currentIndex].cloneNode(true));
