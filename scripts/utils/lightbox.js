@@ -20,7 +20,7 @@ const addLightboxEvents = () => {
     .addEventListener("click", changeMedia);
 };
 
-// Affichage de la lightbox
+// Ouverture de la lightbox avec affichage de l'élément clické
 const openLightbox = (event) => {
   medias = document.querySelectorAll("article");
 
