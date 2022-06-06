@@ -36,9 +36,9 @@ class PhotographerFactory {
                 <p>${this.tagline}</p>
             </div>
         </div>
-        <button class="contact_button" id="openModal" aria-label="Contact me">Contactez-moi</button>
+        <button class="contact_button" id="openModal" aria-label="Bouton d'ouverture du formulaire de contact">Contactez-moi</button>
         <div id="photographerImage">
-            <img tabindex="0" src="./assets/photographers/${this.portrait}" alt="${this.name} profile picture">
+            <img tabindex="0" src="./assets/photographers/${this.portrait}" alt="Photo de ${this.name}">
         </div>
         `;
   }
