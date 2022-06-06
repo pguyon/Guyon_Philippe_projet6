@@ -27,6 +27,7 @@ const openLightbox = (event) => {
   // Récupération du media clické
   const url = event.currentTarget.firstElementChild.attributes.src.value;
   medias.forEach((media, index) => {
+    // si l'index du media clické correspond à la currentTarget, alors l'index de la currentTarget devient l'index de référence.
     if (
       media.firstElementChild.firstElementChild.attributes.src.value === url
     ) {
